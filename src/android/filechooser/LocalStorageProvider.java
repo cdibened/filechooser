@@ -16,8 +16,6 @@ import android.provider.DocumentsProvider;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 
-import com.ipaulpro.afilechooser.R;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

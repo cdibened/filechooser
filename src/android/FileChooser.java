@@ -47,7 +47,7 @@ public class FileChooser extends CordovaPlugin {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if( requestCode == REQUEST_CODE) {
                 // If the file selection was successful
                 if (resultCode == Activity.RESULT_OK) {
