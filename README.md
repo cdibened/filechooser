@@ -1,6 +1,6 @@
 # FileChooser Cordova plugin for Android (mainly KitKat)
 
-This plugin was created as a workaround for https://issues.apache.org/jira/browse/CB-5294.
+This plugin was created as a workaround for https://issues.apache.org/jira/browse/CB-5294 and https://code.google.com/p/android/issues/detail?id=62220.
 
 The core pieces of the code were taken from https://github.com/iPaulPro/aFileChooser. A huge thanks to him!!!  All I did was write the plugin wrapper around it.
 
