@@ -40,6 +40,5 @@ The first argument, which will eventually be filechooser parameters such as mult
 
 
 ### Next up
--   somehow get the installation to append the `strings.xml`
 -   automatically `import your.package.name.R` in the java files
 -   add support for parameters in the filechooser
