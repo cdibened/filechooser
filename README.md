@@ -11,18 +11,8 @@ cordova plugin add https://github.com/cdibened/filechooser.git
 ```
 
 ### Configuration
-Since there is no way to append to the `strings.xml` found in `res/values` directory when using the `cordova plugin add` command, after successful installation, you will have to manually copy the following.
 
-```
-    <string name="empty_directory">Empty Directory</string>
-    <string name="storage_removed">Storage was removed or unmounted.</string>
-    <string name="choose_file">Select a file</string>
-    <string name="chooser_title">File Browser</string>
-    <string name="error_selecting_file">Error selecting File</string>
-    <string name="internal_storage">Internal storage</string>
-```
-
-In addition, you wil have to `import your.package.name.R` into the following java files.
+You will have to `import your.package.name.R` into the following java files.
 
 ```
     FileChooser.java 
