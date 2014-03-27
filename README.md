@@ -17,6 +17,7 @@ Since there is no way to append to the `strings.xml` found in `res/values` direc
     <string name="empty_directory">Empty Directory</string>
     <string name="storage_removed">Storage was removed or unmounted.</string>
     <string name="choose_file">Select a file</string>
+    <string name="chooser_title">File Browser</string>
     <string name="error_selecting_file">Error selecting File</string>
     <string name="internal_storage">Internal storage</string>
 ```
