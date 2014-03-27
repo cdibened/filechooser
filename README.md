@@ -25,6 +25,7 @@ Since there is no way to append to the `strings.xml` found in `res/values` direc
 In addition, you wil have to `import your.package.name.R` into the following java files.
 
 ```
+    FileChooser.java 
     FileChooserActivity.java 
     FileListAdapter.java
     FileListFragment.java
