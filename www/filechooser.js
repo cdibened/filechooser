@@ -11,7 +11,7 @@
             success(args);
         }, function(args) {
             fail(args);
-        }, 'FileChooser', 'open', [params]);
+        }, 'FileChooser', 'open', [params||{}]);
     };
 
     window.filechooser = new FileChooser();

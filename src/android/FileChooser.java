@@ -40,7 +40,7 @@ public class FileChooser extends CordovaPlugin {
         Intent intent = Intent.createChooser(
                 target, getString(R.string.chooser_title));
         try {
-            this.cordova.startActivityForResult(intent, REQUEST_CODE);
+            this.cordova.startActivityForResult((CordovaPlugin) this, intent, REQUEST_CODE);
         } catch (ActivityNotFoundException e) {
             // The reason for the existence of aFileChooser
         }
@@ -50,7 +50,7 @@ public class FileChooser extends CordovaPlugin {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if( requestCode == REQUEST_CODE) {
                 // If the file selection was successful
-                if (resultCode == RESULT_OK) {
+                if (resultCode == Activity.RESULT_OK) {
                     if (data != null) {
                         // Get the URI of the selected file
                         final Uri uri = data.getData();
@@ -58,7 +58,7 @@ public class FileChooser extends CordovaPlugin {
                         JSONObject obj = new JSONObject();
                         try {
                             // Get the file path from the URI
-                            final String path = FileUtils.getPath(this, uri);
+                            final String path = FileUtils.getPath(this.cordova.getActivity(), uri);
                             obj.put("filepath", path);
                             this.callbackContext.success(obj);
                         } catch (Exception e) {
