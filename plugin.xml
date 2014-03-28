@@ -4,7 +4,7 @@
     id="com.cesidiodibenedetto.filechooser"
     version="1.0.0">
     <name>FileChooser</name>
-    <description>File Chooser for Cordova</description>
+    <description>File Chooser for Cordova to overcome Android 4.4 issues outlined here: https://issues.apache.org/jira/browse/CB-5294 and https://code.google.com/p/android/issues/detail?id=62220</description>
     <license>MIT</license>
     <keywords>cordova,filechooser,android</keywords>
 
