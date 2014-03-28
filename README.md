@@ -80,7 +80,7 @@ The first argument, which will eventually be filechooser parameters such as mult
 
 
     <input type="file" id="fileinput" name="fileinput"/>
-    if( device.version.indexOf( '4.4' ) === 0 ) {
+    if( device.platform.toLowerCase() === 'android' && device.version.indexOf( '4.4' ) === 0 ) {
         $('#fileinput').click( function(e) {
             filechooser.open( {}, success, error );
         });
