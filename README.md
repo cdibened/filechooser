@@ -35,7 +35,7 @@ The first argument, which will eventually be filechooser parameters such as mult
         console.log( msg );
     };
     
-    window.filechooser.open({},success,error);
+    filechooser.open({},success,error);
 ```
 
 ### Example
@@ -79,9 +79,11 @@ The first argument, which will eventually be filechooser parameters such as mult
 
 
     <input type="file" id="fileinput" name="fileinput"/>
-    $('#fileinput').click( function() {
-        window.filechooser.open( {}, success, error );
-    });
+    if( device.version.indexOf( '4.4' ) === 0 ) {
+        $('#fileinput').click( function(e) {
+            filechooser.open( {}, success, error );
+        });
+    }
 ```
 
 
