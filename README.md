@@ -38,6 +38,52 @@ The first argument, which will eventually be filechooser parameters such as mult
     window.filechooser.open({},success,error);
 ```
 
+### Example
+
+```
+    var success = function( data ) {
+        var filepath = data.filepath;
+        function win(r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Response = " + r.response);
+            console.log("Sent = " + r.bytesSent);
+        }
+
+        function fail(error) {
+            console.log("An error has occurred: Code = " + error.code);
+            console.log("upload error source " + error.source);
+            console.log("upload error target " + error.target);
+        }
+
+        var uri = encodeURI("http://localhost/upload/processupload.php");
+        var options = new FileUploadOptions();
+        options.fileKey="file";
+        options.fileName=filepath.substr(filepath.lastIndexOf('/')+1);
+
+        var ft = new FileTransfer();
+        ft.onprogress = function(progressEvent) {
+            if (progressEvent.lengthComputable) {
+                loadingStatus.setPercentage(progressEvent.loaded / progressEvent.total);
+            } 
+            else {
+                loadingStatus.increment();
+            }
+        };
+
+        ft.upload(filepath, uri, win, fail, options);  
+    };
+    
+    var error = function( msg ) {
+        console.log( msg );
+    };
+
+
+    <input type="file" id="fileinput" name="fileinput"/>
+    $('#fileinput').click( function() {
+        window.filechooser.open( {}, success, error );
+    });
+```
+
 
 ### Next up
 -   automatically `import your.package.name.R` in the java files
