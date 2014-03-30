@@ -3,7 +3,12 @@
 This plugin was created as a workaround for https://issues.apache.org/jira/browse/CB-5294 and https://code.google.com/p/android/issues/detail?id=62220. This plugin is mainly configured for Android 4.4 so I would recommend to continue to use the native file dialogs for earlier versions of Android. There might be issues with the plugin as I have not fully tested all possible scenarios on many devices, but I have installed it on a Nexus 5 and it worked fine.
 
 
-The core pieces of the code were taken from https://github.com/iPaulPro/aFileChooser. A huge thanks to him!!!  All I did was write the plugin wrapper around it.
+The core pieces of the code were taken from https://github.com/iPaulPro/aFileChooser. A huge thanks to him!!!  All I did was write the plugin wrapper around it.  Please take note of the second part of the `Setup` step from the aforementioned **[aFileChooser](https://github.com/iPaulPro/aFileChooser)**.
+```
+    Note that like a ContentProvider, the DocumentProvider authority must be unique. 
+    You should change com.ianhanniballake.localstorage.documents in your Manifest, as 
+    well as the LocalStorageProvider.AUTHORITY field.
+```
 
 
 ### Installation
