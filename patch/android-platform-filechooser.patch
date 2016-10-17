@@ -1,0 +1,84 @@
+diff -ruw android.orig/src/com/cesidiodibenedetto/filechooser/FileChooser.java android/src/com/cesidiodibenedetto/filechooser/FileChooser.java
+--- android.orig/src/com/cesidiodibenedetto/filechooser/FileChooser.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/cesidiodibenedetto/filechooser/FileChooser.java	2015-06-22 19:01:52.908404787 +0200
+@@ -22,6 +22,8 @@
+ 
+ import com.ipaulpro.afilechooser.utils.FileUtils;
+ 
++import PACKAGE.R;
++
+ /**
+  * FileChooser is a PhoneGap plugin that acts as polyfill for Android KitKat and web
+  * applications that need support for <input type="file">
+diff -ruw android.orig/src/com/ianhanniballake/localstorage/LocalStorageProvider.java android/src/com/ianhanniballake/localstorage/LocalStorageProvider.java
+--- android.orig/src/com/ianhanniballake/localstorage/LocalStorageProvider.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/ianhanniballake/localstorage/LocalStorageProvider.java	2015-06-22 19:01:52.900404713 +0200
+@@ -21,6 +21,8 @@
+ import java.io.FileOutputStream;
+ import java.io.IOException;
+ 
++import PACKAGE.R;
++
+ public class LocalStorageProvider extends DocumentsProvider {
+ 
+     public static final String AUTHORITY = "com.ianhanniballake.localstorage.documents";
+diff -ruw android.orig/src/com/ipaulpro/afilechooser/FileChooserActivity.java android/src/com/ipaulpro/afilechooser/FileChooserActivity.java
+--- android.orig/src/com/ipaulpro/afilechooser/FileChooserActivity.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/ipaulpro/afilechooser/FileChooserActivity.java	2015-06-22 18:59:58.815348192 +0200
+@@ -36,6 +36,8 @@
+ 
+ import java.io.File;
+ 
++import PACKAGE.R;
++
+ /**
+  * Main Activity that handles the FileListFragments
+  *
+diff -ruw android.orig/src/com/ipaulpro/afilechooser/FileListAdapter.java android/src/com/ipaulpro/afilechooser/FileListAdapter.java
+--- android.orig/src/com/ipaulpro/afilechooser/FileListAdapter.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/ipaulpro/afilechooser/FileListAdapter.java	2015-06-22 18:59:03.178832147 +0200
+@@ -27,6 +27,8 @@
+ import java.util.ArrayList;
+ import java.util.List;
+ 
++import PACKAGE.R;
++
+ /**
+  * List adapter for Files.
+  * 
+diff -ruw android.orig/src/com/ipaulpro/afilechooser/FileListFragment.java android/src/com/ipaulpro/afilechooser/FileListFragment.java
+--- android.orig/src/com/ipaulpro/afilechooser/FileListFragment.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/ipaulpro/afilechooser/FileListFragment.java	2015-06-22 18:59:40.251176067 +0200
+@@ -28,6 +28,8 @@
+ import java.io.File;
+ import java.util.List;
+ 
++import PACKAGE.R;
++
+ /**
+  * Fragment that displays a list of Files in a given path.
+  * 
+diff -ruw android.orig/src/com/ipaulpro/afilechooser/FileLoader.java android/src/com/ipaulpro/afilechooser/FileLoader.java
+--- android.orig/src/com/ipaulpro/afilechooser/FileLoader.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/ipaulpro/afilechooser/FileLoader.java	2015-06-22 19:00:41.147740468 +0200
+@@ -27,6 +27,8 @@
+ import java.util.Arrays;
+ import java.util.List;
+ 
++import PACKAGE.R;
++
+ /**
+  * Loader that returns a list of Files in a given file path.
+  * 
+diff -ruw android.orig/src/com/ipaulpro/afilechooser/utils/FileUtils.java android/src/com/ipaulpro/afilechooser/utils/FileUtils.java
+--- android.orig/src/com/ipaulpro/afilechooser/utils/FileUtils.java	2015-06-22 18:55:47.000000000 +0200
++++ android/src/com/ipaulpro/afilechooser/utils/FileUtils.java	2015-06-22 19:00:49.395816864 +0200
+@@ -38,6 +38,8 @@
+ import java.text.DecimalFormat;
+ import java.util.Comparator;
+ 
++import PACKAGE.R;
++
+ /**
+  * @version 2009-07-03
+  * @author Peli

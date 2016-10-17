@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e
+
+patch_file='plugin/com.cesidiodibenedetto.filechooser/patch/android-platform-filechooser.patch'
+package="$(sed -rn '/^<manifest /s/.*package="([^"]+)".*/\1/p' platforms/android/AndroidManifest.xml)"
+
+gen_patch() {
+	sed "s/PACKAGE/$package/" < "$patch_file"
+}
+
+if ! patch -v > /dev/null
+then
+	echo "Missing 'patch' command." >&2
+	exit 1
+fi
+
+if gen_patch | ( cd platforms/android && patch -p1 --dry-run --batch --forward --silent >/dev/null )
+then
+	gen_patch | ( cd platforms/android && patch -p1 --batch --forward -r - )
+else
+	echo "Skipping patches, they are already applied or broken." >&2
+fi
+
